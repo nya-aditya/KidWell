@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface-container-highest: #e4e2e0;
+  --color-error: #ba1a1a;
+  --color-surface-variant: #e4e2e0;
+  --color-on-background: #1b1c1a;
+  --color-surface-container: #efeeeb;
+  --color-inverse-primary: #d0c890;
+  --color-on-primary: #ffffff;
+  --color-secondary-fixed: #dde5d9;
+  --color-tertiary-fixed-dim: #e7bbc4;
+  --color-primary-container: #e2d9a0;
+  --color-secondary: #596157;
+  --color-on-primary-fixed-variant: #4d481c;
+  --color-surface-dim: #dbdad7;
+  --color-surface-tint: #655f32;
+  --color-surface-container-low: #f5f3f1;
+  --color-on-error: #ffffff;
+  --color-inverse-on-surface: #f2f0ee;
+  --color-surface-bright: #fbf9f6;
+  --color-on-surface: #1b1c1a;
+  --color-background: #fbf9f6;
+  --color-tertiary-container: #f9ccd5;
+  --color-tertiary: #77555d;
+  --color-primary-fixed-dim: #d0c890;
+  --color-error-container: #ffdad6;
+  --color-tertiary-fixed: #ffd9e0;
+  --color-on-primary-container: #645e31;
+  --color-secondary-fixed-dim: #c1c9bd;
+  --color-on-surface-variant: #434842;
+  --color-on-tertiary-container: #76545c;
+  --color-surface: #fbf9f6;
+  --color-on-tertiary-fixed-variant: #5e3e45;
+  --color-outline: #737871;
+  --color-secondary-container: #dae2d6;
+  --color-outline-variant: #c3c8c0;
+  --color-on-primary-fixed: #1f1c00;
+  --color-on-error-container: #93000a;
+  --color-inverse-surface: #30312f;
+  --color-on-secondary-container: #5d655b;
+  --color-surface-container-high: #e9e8e5;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-tertiary: #ffffff;
+  --color-primary: #655f32;
+  --color-on-tertiary-fixed: #2d141b;
+  --color-on-secondary-fixed-variant: #414940;
+  --color-on-secondary-fixed: #161d16;
+  --color-primary-fixed: #ede4aa;
+  --color-on-secondary: #ffffff;
+
+  --font-headline-xl: "Literata", serif;
+  --font-headline-lg: "Literata", serif;
+  --font-headline-md: "Literata", serif;
+  --font-headline-lg-mobile: "Literata", serif;
+  --font-body-md: "Plus Jakarta Sans", sans-serif;
+  --font-body-lg: "Plus Jakarta Sans", sans-serif;
+  --font-label-md: "Plus Jakarta Sans", sans-serif;
+  --font-display: "Literata", serif;
+  --font-headline: "Literata", serif;
+  --font-body: "Plus Jakarta Sans", sans-serif;
+  --font-label: "Plus Jakarta Sans", sans-serif;
+
+  --radius-24: 24px;
+}
+
+@layer utilities {
+  .blob-shape {
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+  }
+  .organic-border {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  .custom-shadow {
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.04);
+  }
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+}
+
+body {
+  background-color: #FFF9EB;
+  color: #1d1c14;
+  min-height: 100dvh;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* Custom styles and animations */
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1);
+    background-color: rgba(245, 218, 223, 0.4);
+  }
+  40% {
+    transform: scale(1.6);
+    background-color: rgba(245, 218, 223, 0.8);
+  }
+  60% {
+    transform: scale(1.6);
+    background-color: rgba(245, 218, 223, 0.8);
+  }
+}
+
+.breathing-circle-animate {
+  animation: breathe 10s infinite ease-in-out;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
